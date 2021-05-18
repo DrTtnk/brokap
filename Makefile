@@ -1,8 +1,8 @@
 CC = g++
 FLAGS = -fPIC -g -O0
 SOURCE = tracker.cpp brokap.cpp SceneDrawer.cpp data.cpp
-INCLUDE = -I./kinect/OpenNI/Include `pkg-config python-3.6 --cflags`
-LIBS = -lOpenNI -lglut -lGL `pkg-config python-3.6 --libs`
+INCLUDE = -I/usr/include/ni/ -I/usr/include/python3.8
+LIBS = -lOpenNI -lglut -lGL -lpython3.8
 
 all: cython
 	$(CC) $(FLAGS) $(SOURCE) $(INCLUDE) $(LIBS) -o brokap_server
