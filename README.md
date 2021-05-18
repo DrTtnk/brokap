@@ -6,10 +6,13 @@ Blender motion capture - Docker Builder Fork
 
 Motion capture for blender using Xbox 360 Kinect
 
+To install the needed .`so`:
+
+    sudo apt install openni-utils libopenni-dev
+
 To build `brokap_server` in ubuntu:
-```shell
+    
     DOCKER_BUILDKIT=1 docker build -t brokap -o ./build . 
-```
 
 Ubuntu automatically registers `gspca_kinect` module for the Kinect.
 This module needs to be removed to avoid conflict with `brokap_server`
